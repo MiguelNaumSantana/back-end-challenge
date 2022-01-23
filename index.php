@@ -14,4 +14,13 @@
  */
 declare(strict_types=1);
 
+
 require __DIR__ . '/vendor/autoload.php';
+
+require __DIR__ . '/src/ApiConversao.php';
+
+if(isset($_SERVER['REQUEST_URI'])){
+    print_r(ApiConversao::checkUrl($_SERVER['REQUEST_URI']));
+}
+
+
